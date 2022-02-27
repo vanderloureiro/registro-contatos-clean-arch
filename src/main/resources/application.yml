@@ -4,12 +4,12 @@ spring:
 
   datasource:
     url: jdbc:h2:mem:contato_db
+    username: sa
+    password: password
     driverClassName: org.h2.Driver
-    username: db
-    password:
 
   jpa:
-    database-plataform: org.hibernate.dialect.H2Dialect
+    spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
 
   h2:
     console:
