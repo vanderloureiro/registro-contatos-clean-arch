@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: registro-contatos-clean-arch
+
+  datasource:
+    url: jdbc:h2:mem:contato_db
+    driverClassName: org.h2.Driver
+    username: db
+    password:
+
+  jpa:
+    database-plataform: org.hibernate.dialect.H2Dialect
+
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+server:
+  port: 8081
