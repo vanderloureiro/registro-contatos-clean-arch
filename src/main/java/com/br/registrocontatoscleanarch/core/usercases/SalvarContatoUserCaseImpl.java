@@ -1,23 +1,23 @@
 package com.br.registrocontatoscleanarch.core.usercases;
 
-import com.br.registrocontatoscleanarch.core.adapters.ContatoDbGateway;
+import com.br.registrocontatoscleanarch.core.ports.ContatoRepository;
 import com.br.registrocontatoscleanarch.core.models.Contato;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class SalvarContatoUserCaseImpl implements SalvarContatoUserCase {
 
-    private final ContatoDbGateway contatoDbGateway;
+    private final ContatoRepository contatoRepository;
 
-    public SalvarContatoUserCaseImpl(ContatoDbGateway contatoDbGateway) {
-        this.contatoDbGateway = contatoDbGateway;
+    public SalvarContatoUserCaseImpl(ContatoRepository contatoRepository) {
+        this.contatoRepository = contatoRepository;
     }
 
     @Override
     public void salvar(Contato contato) {
         verificaSeEmailValido(contato.getEmail());
         verificaSeTelefoneValido(contato.getTelefone());
-        contatoDbGateway.salvar(contato);
+        contatoRepository.salvar(contato);
     }
 
     private void verificaSeEmailValido(String email) {

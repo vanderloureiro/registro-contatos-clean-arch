@@ -1,6 +1,6 @@
 package com.br.registrocontatoscleanarch.infrastructure.repository;
 
-import com.br.registrocontatoscleanarch.core.adapters.ContatoDbGateway;
+import com.br.registrocontatoscleanarch.core.ports.ContatoRepository;
 import com.br.registrocontatoscleanarch.core.models.Contato;
 import com.br.registrocontatoscleanarch.infrastructure.repository.jpa.ContatoJpaRepository;
 import com.br.registrocontatoscleanarch.infrastructure.repository.mapper.ContatoRepositoryMapper;
@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class ContatoRepositoryImpl implements ContatoDbGateway {
+public class ContatoRepositoryImpl implements ContatoRepository {
 
     private final ContatoJpaRepository contatoJpaRepository;
     private final ContatoRepositoryMapper contatoRepositoryMapper;

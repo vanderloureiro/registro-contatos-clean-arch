@@ -1,10 +1,10 @@
-package com.br.registrocontatoscleanarch.core.adapters;
+package com.br.registrocontatoscleanarch.core.ports;
 
 import com.br.registrocontatoscleanarch.core.models.Contato;
 
 import java.util.List;
 
-public interface ContatoDbGateway {
+public interface ContatoRepository {
 
     void salvar(Contato contato);
 
