@@ -2,30 +2,45 @@ package com.br.registrocontatoscleanarch.infrastructure.repository;
 
 import com.br.registrocontatoscleanarch.core.ports.ContatoRepository;
 import com.br.registrocontatoscleanarch.core.models.Contato;
+import com.br.registrocontatoscleanarch.infrastructure.repository.entities.ContatoJpa;
 import com.br.registrocontatoscleanarch.infrastructure.repository.jpa.ContatoJpaRepository;
-import com.br.registrocontatoscleanarch.infrastructure.repository.mapper.ContatoRepositoryMapper;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class ContatoRepositoryImpl implements ContatoRepository {
 
     private final ContatoJpaRepository contatoJpaRepository;
-    private final ContatoRepositoryMapper contatoRepositoryMapper;
 
-    public ContatoRepositoryImpl(ContatoJpaRepository contatoJpaRepository, ContatoRepositoryMapper contatoRepositoryMapper) {
+    public ContatoRepositoryImpl(ContatoJpaRepository contatoJpaRepository) {
         this.contatoJpaRepository = contatoJpaRepository;
-        this.contatoRepositoryMapper = contatoRepositoryMapper;
     }
 
     @Override
     public void salvar(Contato contato) {
-        // todo
+        ContatoJpa contatoJpa = ContatoJpa.builder()
+                .id(contato.getId())
+                .nome(contato.getNome())
+                .telefone(contato.getTelefone())
+                .celular(contato.getCelular())
+                .email(contato.getEmail())
+                .build();
+        contatoJpaRepository.save(contatoJpa);
     }
 
     @Override
     public List<Contato> buscaTodos() {
-        return null;
+        List<ContatoJpa> contatoJpaList = contatoJpaRepository.findAll();
+        return contatoJpaList.stream().map(contato -> {
+            return Contato.builder()
+                    .id(contato.getId())
+                    .nome(contato.getNome())
+                    .telefone(contato.getTelefone())
+                    .celular(contato.getCelular())
+                    .email(contato.getEmail())
+                    .build();
+        }).collect(Collectors.toList());
     }
 }

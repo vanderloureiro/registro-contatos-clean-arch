@@ -10,7 +10,7 @@ import java.util.UUID;
 @Builder
 @Entity
 @Table(name = "contato")
-public class ContatoEntity {
+public class ContatoJpa {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
