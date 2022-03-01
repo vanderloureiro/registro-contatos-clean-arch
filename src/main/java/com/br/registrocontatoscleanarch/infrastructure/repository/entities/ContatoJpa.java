@@ -1,7 +1,9 @@
 package com.br.registrocontatoscleanarch.infrastructure.repository.entities;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.util.UUID;
@@ -9,6 +11,8 @@ import java.util.UUID;
 @Data
 @Builder
 @Entity
+@NoArgsConstructor
+@AllArgsConstructor
 @Table(name = "contato")
 public class ContatoJpa {
 
