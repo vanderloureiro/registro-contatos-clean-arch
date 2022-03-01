@@ -14,7 +14,7 @@ public class ContatoEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private UUID uuid;
+    private UUID id;
     private String nome;
     private String telefone;
     private String celular;

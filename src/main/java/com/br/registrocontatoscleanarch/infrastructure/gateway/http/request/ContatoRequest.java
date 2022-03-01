@@ -1,21 +1,19 @@
-package com.br.registrocontatoscleanarch.core.models;
+package com.br.registrocontatoscleanarch.infrastructure.gateway.http.request;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.UUID;
-
 @Data
 @Builder
-@NoArgsConstructor
 @AllArgsConstructor
-public class Contato {
+@NoArgsConstructor
+public class ContatoRequest {
 
-    private UUID id;
     private String nome;
     private String telefone;
     private String celular;
     private String email;
+
 }
