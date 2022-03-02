@@ -1,6 +1,6 @@
 package com.br.registrocontatoscleanarch.core.ports;
 
-import com.br.registrocontatoscleanarch.core.models.Contato;
+import com.br.registrocontatoscleanarch.core.entities.Contato;
 
 import java.util.List;
 

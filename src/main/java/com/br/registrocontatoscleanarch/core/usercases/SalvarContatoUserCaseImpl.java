@@ -2,7 +2,7 @@ package com.br.registrocontatoscleanarch.core.usercases;
 
 import com.br.registrocontatoscleanarch.core.exceptions.AtributoInvalidoException;
 import com.br.registrocontatoscleanarch.core.ports.ContatoRepository;
-import com.br.registrocontatoscleanarch.core.models.Contato;
+import com.br.registrocontatoscleanarch.core.entities.Contato;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j

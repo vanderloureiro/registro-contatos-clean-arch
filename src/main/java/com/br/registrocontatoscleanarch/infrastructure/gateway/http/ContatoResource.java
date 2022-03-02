@@ -1,6 +1,6 @@
 package com.br.registrocontatoscleanarch.infrastructure.gateway.http;
 
-import com.br.registrocontatoscleanarch.core.models.Contato;
+import com.br.registrocontatoscleanarch.core.entities.Contato;
 import com.br.registrocontatoscleanarch.core.usercases.BuscarContatosUserCase;
 import com.br.registrocontatoscleanarch.core.usercases.SalvarContatoUserCase;
 import com.br.registrocontatoscleanarch.infrastructure.gateway.http.request.ContatoRequest;

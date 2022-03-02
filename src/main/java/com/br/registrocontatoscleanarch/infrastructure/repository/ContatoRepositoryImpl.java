@@ -1,9 +1,9 @@
 package com.br.registrocontatoscleanarch.infrastructure.repository;
 
 import com.br.registrocontatoscleanarch.core.ports.ContatoRepository;
-import com.br.registrocontatoscleanarch.core.models.Contato;
-import com.br.registrocontatoscleanarch.infrastructure.repository.entities.ContatoJpa;
-import com.br.registrocontatoscleanarch.infrastructure.repository.jpa.ContatoJpaRepository;
+import com.br.registrocontatoscleanarch.core.entities.Contato;
+import com.br.registrocontatoscleanarch.infrastructure.repository.jpaentities.ContatoJpa;
+import com.br.registrocontatoscleanarch.infrastructure.repository.jparepositories.ContatoJpaRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
