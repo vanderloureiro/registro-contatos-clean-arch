@@ -1,6 +1,6 @@
 package com.br.registrocontatoscleanarch.core.usercases;
 
-import com.br.registrocontatoscleanarch.infrastructure.repository.ContatoRepositoryImpl;
+import com.br.registrocontatoscleanarch.infrastructure.repository.ContatoRepositoryAdapterImpl;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -12,7 +12,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 public class BuscarContatosUserCaseImplTest {
 
     @Mock
-    private ContatoRepositoryImpl contatoRepository;
+    private ContatoRepositoryAdapterImpl contatoRepository;
 
     @InjectMocks
     private BuscarContatosUserCaseImpl buscarContatosUserCase;
