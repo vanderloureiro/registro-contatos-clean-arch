@@ -10,11 +10,11 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Service
-public class ContatoRepositoryAdapterImpl implements ContatoRepository {
+public class ContatoRepositoryAdapter implements ContatoRepository {
 
     private final ContatoJpaRepository contatoJpaRepository;
 
-    public ContatoRepositoryAdapterImpl(ContatoJpaRepository contatoJpaRepository) {
+    public ContatoRepositoryAdapter(ContatoJpaRepository contatoJpaRepository) {
         this.contatoJpaRepository = contatoJpaRepository;
     }
 

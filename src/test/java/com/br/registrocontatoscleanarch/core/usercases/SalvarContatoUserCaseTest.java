@@ -7,11 +7,11 @@ import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 @ExtendWith(MockitoExtension.class)
-public class SalvarContatoUserCaseImplTest {
+public class SalvarContatoUserCaseTest {
 
     @Mock
     private ContatoJpaRepository contatoJpaRepository;
 
     @InjectMocks
-    private SalvarContatoUserCaseImpl salvarContatoUserCase;
+    private SalvarContatoUserCase salvarContatoUserCase;
 }
