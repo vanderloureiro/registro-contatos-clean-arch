@@ -1,4 +1,4 @@
-package com.br.registrocontatoscleanarch.core.entities;
+package com.br.registrocontatoscleanarch.core.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
