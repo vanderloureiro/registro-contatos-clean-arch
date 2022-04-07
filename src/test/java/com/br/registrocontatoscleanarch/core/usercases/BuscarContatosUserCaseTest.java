@@ -1,8 +1,7 @@
 package com.br.registrocontatoscleanarch.core.usercases;
 
 import com.br.registrocontatoscleanarch.core.domain.Contato;
-import com.br.registrocontatoscleanarch.infrastructure.repository.ContatoRepositoryAdapter;
-import org.assertj.core.api.Assert;
+import com.br.registrocontatoscleanarch.core.ports.ContatoRepository;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -22,7 +21,7 @@ import static org.mockito.Mockito.when;
 public class BuscarContatosUserCaseTest {
 
     @Mock
-    private ContatoRepositoryAdapter contatoRepository;
+    private ContatoRepository contatoRepository;
 
     @InjectMocks
     private BuscarContatosUserCase buscarContatosUserCase;
